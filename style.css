@@ -1,0 +1,23 @@
+
+section{
+}
+.qr-code{
+	margin-top: 100px;
+}
+.container{
+	height: 100%;
+}
+.qr-code img{
+	width: 100%;
+}
+.btn-prim{
+	background: #FF7000 !important;
+	box-shadow: 0px 5px 6px 4px  #fbb47e;
+	color: white !important;
+	width: 100% !important;
+}
+.dfx{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
