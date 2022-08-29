@@ -1,5 +1,9 @@
 body{
 	background-color: #F4EEE7 !important;
+	font-family: 'Poppins' sans-serif !important;
+}
+:root{
+	--main-bg-color:#FF7000;
 }
 .qr-code{
 	margin-top: 100px;
@@ -21,7 +25,7 @@ body{
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
-	background: #FF7000;
+	background: var(--main-bg-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -50,14 +54,14 @@ body{
 	top: 0px;
 }
 .page-title{
-	font-family: 'Poppins';
+	
 	font-style: normal;
 	font-weight: 600;
 	font-size: 22px;
 	line-height: 33px;
 }
 .cafe-name{
-	font-family: 'Poppins';
+	
 	font-style: normal;
 	font-weight: 500;
 	font-size: 18px;
@@ -71,7 +75,7 @@ body{
 }
 .card-price{
 	font-size: 14px;
-	font-family: 'Poppins';
+	
 	font-style: normal;
 	font-weight: 700;
 	font-size: 14px;
@@ -97,6 +101,10 @@ body{
 .bdr{
 	border-radius: 15px !important;
 }
+.mbgc{
+	background-color:var(--main-bg-color) !important;
+	color: white !important;
+}
 .image-box{
 	width: 95px; 
 	height: 95px;
@@ -108,3 +116,111 @@ body{
 	background: #FF7000 !important;
 	color: #fff !important;
 }
+/* POPUP */
+.popup{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0,0.8);
+	top: 0;
+	left: 0;
+	z-index: 10001;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s
+
+}
+.total{
+	text-align: right;
+	font-size: 24px;
+	font-family: 'Montez', cursive;
+}
+.popup.open{
+	opacity: 1;
+	visibility: visible;
+}
+.popup.open .popup-content{
+	transform: perspective(600px) translate(0, 0) rotate(0deg);
+	opacity: 1;
+}
+.popup-body{
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 10px;
+}
+.popup-content{
+	background-color: #F4EEE7 !important;
+	color: #000;
+	width: 800px;
+	position: relative;
+	padding: 40px 10px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.popup-btn{
+	border: none;
+	padding:0;
+	margin:0;
+	position: absolute;
+	right:10px;
+	top:10px;
+}
+.close-btn{
+	width: 30px;
+	height: 30px;
+}
+.popup-image{
+	width:50%
+}
+.popup-img-box{
+	text-align: center;
+}
+.popup-title{
+	text-align: center;
+	
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+}
+.popup-text{
+	
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 22px;
+	height: 100%;
+}
+.count{
+	background-color: white;
+	display: flex;
+	gap:20px;
+	align-items: center;
+	border-radius: 15px;
+}
+.btn-count{
+	border: 0;
+	background-color: inherit
+}
+.amount{
+	display: flex;
+	justify-content: space-between;
+}
+
+/* .popup-text-continue{
+
+}
+.popup-text-continue:hover{
+
+}
+.tooltip:hover{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: red;
+	border: 1px solid #ccc
+} */

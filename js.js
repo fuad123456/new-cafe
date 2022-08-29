@@ -1,5 +1,5 @@
-const popup= document.getElementById('popup')
-const popupBtn= document.getElementById('popupBtn')
+
+
 // popupBtn.addEventListener('click',function(){
 // 	popup.classList.add('open')
 // })
@@ -11,9 +11,9 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 6,
   	spaceBetween: 0,
 	// If we need pagination
-	pagination: {
-	  el: '.swiper-pagination',
-	},
+	// pagination: {
+	//   el: '.swiper-pagination',
+	// },
   
 	breakpoints: {
 		// when window width is >= 320px
@@ -64,3 +64,13 @@ const swiper = new Swiper('.swiper', {
 		console.log(this);
 	})
   })
+  const popup = document.querySelector('#popup');
+  const popupBtn= document.getElementById('popupBtn')
+  const cards= document.querySelectorAll('.card-item')
+  cards.forEach(card => {
+	card.addEventListener('click',function(e) {
+		popup.classList.add('open')
+	})
+  })
+
+  document.getElementById('popup-close-btn').addEventListener('click',function(){popup.classList.remove('open')})
