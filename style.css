@@ -15,7 +15,7 @@ body{
 	width: 100%;
 }
 .section{
-	padding-top: 100px;
+	padding-top: 50px;
 }
 .section-description{
 	display: flex;
@@ -207,6 +207,7 @@ body{
 	gap:20px;
 	align-items: center;
 	border-radius: 15px;
+	padding: 10px;
 }
 .btn-count{
 	border: 0;
@@ -226,6 +227,7 @@ body{
 .amount{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 .total-amount{
 	display: flex;
